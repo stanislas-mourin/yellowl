@@ -1,0 +1,27 @@
+<p>postcard works!</p>
+<form id="formPost" action="">
+    <div class="form-group">
+      <input type="text" class="form-control" name="titlepost"  placeholder="Enter title" [(ngModel)]="title">
+    </div>
+    <div class="form-group">
+        <textarea id="sharepost" class="form-control" name="sharepost" rows="5" cols="33" [(ngModel)]="content">
+        What do you want to share today ?
+        </textarea>
+    </div>
+    <!-- <div class="form-group">
+        <input type="text" class="form-control" name="sectionpost"  placeholder="Choose the section of your post">
+    </div>
+    <div class="form-group">
+        <input type="file" class="form-control-file" name="uploadpost" placeholder="Upload content" (change)="selectFile($event)" [(ngModel)]="media">
+      </div>
+      <div class="form-group">
+        <img [src]="url" width="100" height="100" alt="">
+    </div> -->
+    <div class="btns">
+      <button class="btnCancel btn-primary">Cancel</button>
+    <button type="submit" (click)="addpost()" class="btnOK btn-primary">OK</button>
+    </div>
+    <tr *ngFor="let e of liste;">
+      <td>{{ e.namecategory }}</td>
+      </tr>
+  </form>

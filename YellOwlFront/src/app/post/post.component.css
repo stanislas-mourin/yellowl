@@ -1,0 +1,141 @@
+.box{
+    margin:15px;
+    padding:5px;
+    background:white;
+    width:550px;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    display:grid;
+    grid-template-columns: 0.5fr 1fr 10fr 1fr ;
+    grid-template-rows: 0.8fr 0.8fr 1.5fr auto 1fr;
+    grid-row-gap: 5px;
+    grid-template-areas:
+    "arrowUp numberLikes catAndUser report"
+    "arrowDown numberDislikes published report" 
+    "title title title title"
+    "content content content content"
+    "comment nbComments nbComments .";
+}
+
+.arrowUp{
+    grid-area:arrowUp;
+    margin:auto;
+}
+
+.arrowDown{
+    grid-area:arrowDown;
+    margin:auto;
+}
+
+.numberLikes{
+    grid-area:numberLikes;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.numberDislikes{
+    grid-area:numberDislikes;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.catAndUser{
+    grid-area:catAndUser;
+    margin-top:auto;
+    margin-left: 1%;
+    margin-bottom:1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:18px;
+}
+
+.report{
+    grid-area:report;
+    margin:auto;
+}
+
+.published{
+    grid-area:published;
+    margin-bottom:auto;
+    margin-left: 1%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:14px;
+}
+
+.title{
+    grid-area:title;
+    margin-top:auto;
+    margin-bottom:auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:22px;
+    font-weight: bold;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.content{
+    max-height:400px;
+    padding:2%;
+    border:solid green;
+    grid-area:content;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.comment{
+    grid-area:comment;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left:50%;
+}
+.nbComments{
+    grid-area:nbComments;
+    margin-top:auto;
+    margin-bottom:auto;
+    margin-left: 4%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img{
+    margin:auto;
+    position: relative;
+    padding:3%;
+    max-width: 100%;
+    height: auto;
+}
+
+/* .video{
+    
+}
+
+.link{
+    
+}
+
+.texte{
+    
+} */
+
+.gif{
+    margin:auto;
+    position: relative;
+    padding:3%;
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 578px) {
+    .box {
+    width:95%;
+    }
+  }
+  

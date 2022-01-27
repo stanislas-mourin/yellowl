@@ -1,0 +1,38 @@
+<div class="topnav">
+    <div class="topnav-left">
+        <img class="logo" src="/assets/images/logo.png" routerLink="/home">
+    </div>
+
+    <div class="topnav-middle" *ngIf="$isAuth==false">
+
+        <div><input type="button" routerLink="/login" value="Log in"></div>
+        
+    </div>
+
+
+    <div class="topnav-right" *ngIf="$isAuth==false">
+        
+        <div><input type="button" routerLink="/register" value="Register"></div>
+    
+    </div> 
+
+    <div class="topnav-middle" *ngIf="$isAuth==true && $isAdmin==false">
+
+        <div><input type="button" routerLink="/user" value="My personal space"></div>
+        
+    </div>
+
+    <div class="topnav-middle" *ngIf="$isAuth==true && $isAdmin==true">
+
+        <div><input type="button" routerLink="/admin" value="Admin space"></div>
+        
+    </div>
+
+    <div class="topnav-middle" *ngIf="$isAuth==true">
+
+        <div><input type="button" value="Log out" (click)="logOut()"></div>
+        
+    </div>
+
+
+</div>

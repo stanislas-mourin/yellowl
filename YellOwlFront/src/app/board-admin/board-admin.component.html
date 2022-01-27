@@ -1,0 +1,32 @@
+  <div class="page">
+    <div class="sidenav">
+        <div class="sidenavCategories">
+            <p (click)="personalInfo()">Personal informations</p>
+        </div>
+        <div class="sidenavCategories">
+            <p (click)="usersAdmin()">Users administration</p>
+        </div>
+        <div class="sidenavCategories">
+            <p (click)="postsAdmin()">Posts administration</p>
+        </div>
+        <div class="sidenavCategories">
+            <p (click)="categoriesAdmin()">Categories administration</p>
+        </div>
+        <div class="sidenavCategories">
+            <p (click)="commentsAdmin()">Comments administration</p>
+        </div>
+        <div class="sidenavCategories">
+            <p (click)="KPI()">KPI</p>
+        </div>
+    </div>
+    <div class="mainPart">
+      <app-personal-information *ngIf="$displayPersonalInfo"></app-personal-information>
+      <app-users-administration *ngIf="$displayUsersAdmin"></app-users-administration>
+      <app-posts-administration *ngIf="$displayPostsAdmin"></app-posts-administration>
+      <app-categoriess-administration *ngIf="$displayCategoriesAdmin"></app-categoriess-administration>
+      <app-comments-administration *ngIf="$displayCommentsAdmin"></app-comments-administration>
+      <app-kpi *ngIf="$displayKPI"></app-kpi>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>

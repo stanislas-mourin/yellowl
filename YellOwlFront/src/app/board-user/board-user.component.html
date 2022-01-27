@@ -1,0 +1,127 @@
+<div class="page">
+  <div class="sidenav">
+      <img [src]=urlAvatar width="200">
+      <div class="nickName">{{nickName}}</div>
+      <div class="sidenavCategories">
+          <p (click)="getAllPosts()">View my posts</p>
+      </div>
+      <div class="sidenavCategories">
+          <p (click)="getAllComments()">View my comments</p>
+      </div>
+      <div class="sidenavCategories">
+          <p (click)="getAllFavorites()">Saved Contents</p>
+      </div>
+      <div class="sidenavCategories">
+          <p (click)="getAllHidden()">Hidden Contents</p>
+      </div>
+      <div class="sidenavCategories">
+          <p (click)="getUpvoted()">Upvoted</p>
+      </div>
+      <div class="sidenavCategories">
+        <p (click)="getDownvoted()">Downvoted</p>
+    </div>
+      <div class="sidenavCategories">
+          <p (click)="getProfile()">View my Profile</p>
+      </div>
+  </div>
+  <div class="mainPart">
+    <div *ngIf="$displayComments">
+      <app-comments *ngFor="let item of $arrayOfComments" [commentId]="item['id']"></app-comments>
+    </div>
+    <div *ngIf="$displayFavorites">
+      <app-post *ngFor="let item of $arrayOfFavorites" [$id]="item['idPost']"></app-post>
+    </div>
+    <div *ngIf="$displayHidden">
+      <app-post *ngFor="let item of $arrayOfHidden" [$id]="item['idPost']"></app-post>
+    </div>
+    <div *ngIf="$displayPosts">
+      <app-post *ngFor="let item of $arrayOfPosts" [$id]="item['id']"></app-post>
+    </div>
+    <div *ngIf="$displayProfile">
+      <div class="body">
+        <div class="card card-container">
+          <div class="form-group">
+
+            <div class="form-group">
+              <label for="firstname">Firstname</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                name="firstname" 
+                minlength="3" 
+                maxlength="20" 
+                pattern="^[A-Za-z.\s_-]+$"
+                value={{firstName}}
+                />    
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Lastname</label>
+              <input 
+              type="text" 
+              class="form-control" 
+              name="lastname" 
+              minlength="2" 
+              maxlength="30"
+              pattern="^[A-Za-z.\s_-]+$"
+              value={{lastName}}
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="nickname">Nickname</label>
+              <input 
+              type="nickname" 
+              class="form-control" 
+              name="nickname" 
+              minlength="3" 
+              maxlength="30" 
+              pattern="^[a-zA-Z0-9_-]*$"
+              value={{nickName}}
+              />
+            </div>
+
+            <label for="email">Email Address</label>
+            <input type="text" class="form-control" name="email" value={{emailAddress}}/>
+          
+            <div class="form-group">
+              <label for="dateOfBirth">Date of birth</label>
+              <input 
+                type="date"
+                class="form-control" 
+                name="dateOfBirth" 
+                value={{dateOfBirth}}
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input 
+              type="password" 
+              class="form-control" 
+              name="password" 
+              pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" 
+              value={{password}}
+              />
+            </div>
+          
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="$displayUpvoted">
+      <app-post *ngFor="let item of $arrayOfUpvoted" [$id]="item['idPost']"></app-post>
+    </div>
+
+    <div *ngIf="$displayDownvoted">
+      <app-post *ngFor="let item of $arrayOfDownvoted" [$id]="item['idPost']"></app-post>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+<router-outlet></router-outlet>

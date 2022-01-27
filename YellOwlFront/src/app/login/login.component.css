@@ -1,0 +1,88 @@
+.body {
+    width: 60%;
+    height: 75vh;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    background-color: #292C31;
+    border-radius: 0%;
+}
+
+.card-container {
+    background: white;
+    border-radius: 0%;
+}
+
+.form-control {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0%;
+    background: #d0d4e2e8;
+    border: none;
+    font-family: "Fredoka One";
+    font-weight: lighter;
+}
+
+label {
+    font-family: "Fredoka One";
+    font-weight: lighter;
+    font-size: 20px;
+    margin-left: 12%;
+    margin-top: 5%;
+    margin-bottom: 1%;
+}
+
+p {
+    font-family: "Fredoka One";
+    font-weight: lighter;
+    text-decoration: underline;
+    font-size: 12px;
+    margin-left: 12%;
+    margin-top: 1%;
+
+}
+
+.captcha {
+    margin-left: 30%;
+    margin-right: auto;
+    margin-bottom: 15px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 0%;
+
+    background-color: #FCD647;
+    color: black;
+    font-family: "Fredoka One";
+    font-weight: lighter;
+    font-size: 15px;
+    text-align: center;
+
+    margin-left: 40%;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    width: 80%;
+    height: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+    padding: 0;
+
+    border-radius: 0%;
+    border: none;
+
+    text-align: center;
+    font-family: "Fredoka One";
+    font-weight: lighter;
+    
+
+
+}

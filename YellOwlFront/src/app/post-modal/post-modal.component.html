@@ -1,0 +1,47 @@
+<div class="window">
+    Modal window id {{$id}}
+    <div class="close">
+        <img class="closelogo" src="/assets/images/close.png" (click)="closeWindow()">
+    </div>
+    <div class="box">
+        <div class="box1">
+            <img class ="arrowUp" src="/assets/images/arrow up.png" (click)="like()">
+            <div class="numberLikes">+ {{$likes}}</div>
+            <img class ="arrowDown" src="/assets/images/arrow down.png" (click)="dislike()">
+            <div class="numberDislikes">- {{$dislikes}}</div>
+            <div class="catAndUser"><b>{{$category}}</b> - Created by {{$creator}}</div>
+            <img class ="report" src="/assets/images/flag.png" (click)="report()">
+            <div class="published">published {{$age}}</div>
+            <div class="title">{{$title}}</div>
+            <div class="content">
+                <div *ngIf="$media == 'Photo'">
+                    <img src={{$content}} class="img">
+                </div>
+                <div *ngIf="$media == 'Video'" class="video">
+                    <video width="320" height="240" controls="controls">
+                        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+                        <source src={{$content}} type="video/webm" />
+                        <source src={{$content}} type="video/ogg" />
+                        <source src={{$content}} type="video/mov" />
+                    </video> 
+                </div>
+                <div *ngIf="$media == 'GIF'">
+                    <img src={{$content}} class="gif">
+                </div>
+                <div *ngIf="$media == 'Text'">
+                    <p class="texte">{{$content}}</p>     
+                </div>
+                <div *ngIf="$media == 'Link'">
+                    <a href={{$content}} target="_blank" class="link">{{$content}}</a>     
+                </div>
+            </div>
+            <img class ="comment" src="/assets/images/comment.png">
+            <div class="nbComments">{{$comments}}</div>
+        </div>
+        <div class="newComment" *ngIf="$isAuth">
+            <textarea class="textNewComment" rows="5" cols="33" [(ngModel)]="$newComment" placeholder="What are yours thoughts ?"></textarea>
+            <button class="addComment" (click)="sendNewComment()">Comment</button>
+        </div> 
+        <app-comments *ngFor="let item of $arrayOfComments" [commentId]="item['id']"></app-comments>
+    </div>
+</div>

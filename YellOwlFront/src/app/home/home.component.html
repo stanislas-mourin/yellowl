@@ -1,0 +1,18 @@
+<div class="container">
+    
+<app-sidenav></app-sidenav>
+
+<<<<<<< HEAD
+  <button (click)="openCreatePost()">Add Post</button>
+=======
+<!-- <app-sidenav></app-sidenav> -->
+<!-- <app-post [$id]=1></app-post>
+<app-post [$id]=2></app-post>
+<app-post [$id]=3></app-post>
+<app-post [$id]=4></app-post>
+<app-post [$id]=5></app-post> -->
+
+  <button class="topnav-right" (click)="openCreatePost()">Add Post</button>
+>>>>>>> b2cb1d4aced6f7854d44e89a2c25d359cc88abf8
+  <app-post *ngFor="let item of $arrayOfPosts" [$id]="item['id']"></app-post>
+</div>

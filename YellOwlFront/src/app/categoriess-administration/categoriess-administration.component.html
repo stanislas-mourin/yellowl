@@ -1,0 +1,46 @@
+<div class="box">
+    <p>Create a new category</p>
+    <textarea class="name" rows="1" cols="33" [(ngModel)]="$name" placeholder="Category name"></textarea>
+    <textarea class="avatar" rows="1" cols="33" [(ngModel)]="$avatar" placeholder="avatar"></textarea>
+    <button class="addCategory" (click)="createNewCategory()">Create</button>
+    <br>
+    <br>
+    <p>Existing categories</p>
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <p>Id</p>
+                </th>
+                <th>
+                    <p>Category name</p>
+                </th>
+                <th>
+                    <p>Avatar</p>
+                </th>
+            </tr>
+        </thead>
+            <tr *ngFor="let item of $arrayAllCategories">
+                <!-- <form (submit)="updateCategory(item['id'],$event)"> -->
+                <td>
+                    <p>{{item["id"]}}</p>
+                </td>
+                <td>
+                    <input type="text" class="name" name="catName" value="{{item['namecategory']}}">
+                </td>
+                <td>
+                    <input type="text" name="catAvatar" value="{{item['avatar']}}">
+                </td>
+                <td>
+                    <button type="submit" class="addCategory" (click)="updateCategory(item['id'],$event)">Modify</button>
+                </td>
+                <td>
+                    <button class="addCategory" (click)="deleteCategory(item['id'])">Delete</button>
+                </td>
+            <!-- </form> -->
+            </tr>
+    </table>
+
+
+</div>
+

@@ -1,0 +1,34 @@
+<div class="box">
+    <img class ="arrowUp" src="/assets/images/arrow up.png" (click)="openPostView()">
+    <div class="numberLikes" (click)="openPostView()">+ {{$likes}}</div>
+    <img class ="arrowDown" src="/assets/images/arrow down.png" (click)="openPostView()">
+    <div class="numberDislikes" (click)="openPostView()">- {{$dislikes}}</div>
+    <div class="catAndUser" (click)="openPostView()"><b>{{$category}}</b> - Created by {{$creator}}</div>
+    <img class ="report" src="/assets/images/flag.png" (click)="openPostView()">
+    <div class="published" (click)="openPostView()">published {{$age}}</div>
+    <div class="title" (click)="openPostView()">{{$title}}</div>
+    <div class="content">
+        <div *ngIf="$media == 'Photo'" (click)="openPostView()">
+            <img src={{$content}} class="img">
+        </div>
+        <div *ngIf="$media == 'Video'" class="video">
+            <video width="320" height="240" controls="controls">
+                <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4" />
+                <source src={{$content}} type="video/webm" />
+                <source src={{$content}} type="video/ogg" />
+                <source src={{$content}} type="video/mov" />
+            </video> 
+        </div>
+        <div *ngIf="$media == 'GIF'" (click)="openPostView()">
+            <img src={{$content}} class="gif">
+        </div>
+        <div *ngIf="$media == 'Text'" (click)="openPostView()">
+            <p class="texte">{{$content}}</p>     
+        </div>
+        <div *ngIf="$media == 'Link'">
+            <a href={{$content}} target="_blank" class="link">{{$content}}</a>     
+        </div>
+    </div>
+    <img class ="comment" src="/assets/images/comment.png" (click)="openPostView()">
+    <div class="nbComments" (click)="openPostView()">{{$comments}}</div>
+</div>

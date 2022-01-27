@@ -1,0 +1,83 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.body {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  background-color: #292c31;
+  border-radius: 0%;
+  font-family: "Fredoka One";
+  
+}
+
+.card-container {
+  background: white;
+  border-radius: 0%;
+
+}
+
+.form-control {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0%;
+  background: #d0d4e2e8; /* couleur de base : #E0E3ED*/
+  border: none;
+}
+
+label {
+  font-family: "Fredoka One";
+  font-weight: lighter;
+  font-size: 20px;
+  margin-left: 12%;
+  margin-top: 5%;
+  margin-bottom: 1%;
+}
+
+.captcha {
+  margin-left: 30%;
+  margin-right: auto;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+button {
+  height: 40px;
+  width: 100px;
+  border: none;
+  border-radius: 0%;
+
+  background-color: #fcd647;
+  color: black;
+  font-family: "Fredoka One";
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: center;
+
+  margin-left: 40%;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.alert-danger {
+  width: 80%;
+  height: 20px;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  padding: 0;
+
+  border-radius: 0%;
+  border: none;
+
+  text-align: center;
+}
+
+mat-form-field {
+  margin-left: 10%;
+  margin-right: auto;
+}
